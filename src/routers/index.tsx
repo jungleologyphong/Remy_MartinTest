@@ -3,10 +3,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useSelector} from 'react-redux';
 import {CodePushSelector} from '~modules/setting/settingStore';
-import {Splash, Auth} from '~view';
+import {Splash, Auth, SplashRemy, RemyMainScreen} from '~view';
 import {navigationRef} from '~core/helper/navigate';
-const Stack = createNativeStackNavigator();
+import {TokenSelector} from '~modules/authentication';
 
+const Stack = createNativeStackNavigator();
 const privateScreen: any[] = [Auth];
 
 const MainRouter = () => {
@@ -18,7 +19,22 @@ const MainRouter = () => {
           <Stack.Screen name="SplashScreen" component={Splash} />
         ) : (
           privateScreen.map((res: any) => {
-            return <Stack.Screen name={`${res}`} component={res} />;
+            return (
+              <>
+                <Stack.Screen
+                  name="SplashRemy"
+                  component={SplashRemy}
+                  options={{headerShown: false}}
+                />
+                <>
+                  <Stack.Screen
+                    name="RemyMainScreen"
+                    component={RemyMainScreen}
+                    options={{headerShown: false}}
+                  />
+                </>
+              </>
+            );
           })
         )}
       </Stack.Navigator>

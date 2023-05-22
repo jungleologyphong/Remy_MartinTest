@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import {getSource} from '~assets';
 import {styles} from './SplashRemy.Styles';
-import {NextButton} from '~components/nextbutton';
+import {SplashRemyLogics} from './SplashRemy.Logics';
 
 export const SplashRemy: React.FC<any> = props => {
   const {} = props;
+  const {navigateRemyMain} = SplashRemyLogics();
   return (
     <View style={styles.container}>
       <View style={styles.containerMainImg}>
@@ -16,8 +17,13 @@ export const SplashRemy: React.FC<any> = props => {
             style={styles.mainImg}
           />
           <Image source={getSource('BTNPLAY')} style={styles.imgPlay} />
-          <NextButton />
-          {/* <Image source={getSource('BTNNEXT')} style={styles.imgNext} /> */}
+          <TouchableOpacity
+            style={styles.imgNext}
+            onPress={() => {
+              navigateRemyMain();
+            }}>
+            <Image source={getSource('BTNNEXT')} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>

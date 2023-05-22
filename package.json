@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android-dev": "react-native run-android --no-jetifier --variant=devDebug --appId 'com.RemyTest' ",
-    "android-pro": "ENVFILE=.env.pro react-native run-android --no-jetifier --variant=proDebug --appId 'com.RemyTest.pro' ",
+    "android-pro": "ENVFILE=.env.pro react-native run-android --no-jetifier --variant=proDebug --appId 'com.RemyTestPro.pro' ",
     "ios-dev": "react-native run-ios --scheme EnvDev --configuration DebugDev",
     "ios-pro": "react-native run-ios --scheme EnvPro --configuration DebugPro",
     "detox-build-android": "detox build --configuration android.dev.debug",
@@ -44,7 +44,7 @@
     "react-native-code-push": "^7.0.4",
     "react-native-config": "^1.0.0",
     "react-native-fast-image": "^8.5.11",
-    "react-native-gesture-handler": "^2.3.2",
+    "react-native-gesture-handler": "2.9.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-material-ripple": "^0.9.1",
     "react-native-modal": "^13.0.1",

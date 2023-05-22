@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: wp('100%'),
     height: hp('100%'),
-    backgroundColor: 'black',
   },
   containerMainImg: {
     alignItems: 'center',
