@@ -9,33 +9,46 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: wp('100%'),
     height: hp('100%'),
-  },
-  containerMainImg: {
+    justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'column',
+  },
+  coverHeader: {
+    height: hp('15.5%'),
   },
   logo: {
     marginTop: hp('3%'),
   },
-  mainImg: {
-    width: wp('100%'),
-    height: hp('85%'),
-    resizeMode: 'contain',
-  },
-  coverImg: {
+  coverMainImg: {
     justifyContent: 'center',
     alignItems: 'center',
+    height: hp('72%'),
   },
-  imgNext: {
-    width: wp('5%'),
-    height: hp('5%'),
-    right: wp('0.5%'),
-    resizeMode: 'contain',
+  mainImg: {
+    width: wp('100%'),
+    height: hp('72%'),
     position: 'absolute',
+    resizeMode: 'stretch',
   },
-  imgPlay: {
-    width: wp('20%'),
-    height: hp('20%'),
+  coverRemyXO: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    width: wp('100%'),
+    height: hp('10%'),
+  },
+  remyXO: {
+    width: wp('30%'),
+    height: hp('30%'),
+    bottom: hp('2.5%'),
     position: 'absolute',
     resizeMode: 'contain',
+  },
+  txtContent: {
+    textAlign: 'right',
+    position: 'absolute',
+    right: wp('10%'),
+    bottom: hp('2.5%'),
+    fontSize: wp('1.5%'),
   },
 });
